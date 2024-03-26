@@ -179,7 +179,7 @@ ADE20K_CLASS_NAMES = [
     "plant;flora;plant;life",
     "curtain;drape;drapery;mantle;pall",
     "chair",
-    "car;auto;automobile;machine;motorcar",
+    "car;auto;automobile;machine;motorcar", # target
     "water",
     "painting;picture",
     "sofa;couch;lounge",
@@ -239,10 +239,10 @@ ADE20K_CLASS_NAMES = [
     "bar",
     "arcade;machine",
     "hovel;hut;hutch;shack;shanty",
-    "bus;autobus;coach;charabanc;double-decker;jitney;motorbus;motorcoach;omnibus;passenger;vehicle",
+    "bus;autobus;coach;charabanc;double-decker;jitney;motorbus;motorcoach;omnibus;passenger;vehicle", # target
     "towel",
     "light;light;source",
-    "truck;motortruck",
+    "truck;motortruck", # target
     "tower",
     "chandelier;pendant;pendent",
     "awning;sunshade;sunblind",
@@ -261,7 +261,7 @@ ADE20K_CLASS_NAMES = [
     "buffet;counter;sideboard",
     "poster;posting;placard;notice;bill;card",
     "stage",
-    "van",
+    "van", # target
     "ship",
     "fountain",
     "conveyer;belt;conveyor;belt;conveyer;conveyor;transporter",
@@ -275,7 +275,7 @@ ADE20K_CLASS_NAMES = [
     "waterfall;falls",
     "tent;collapsible;shelter",
     "bag",
-    "minibike;motorbike",
+    "minibike;motorbike", # target
     "cradle",
     "oven",
     "ball",
@@ -286,7 +286,7 @@ ADE20K_CLASS_NAMES = [
     "microwave;microwave;oven",
     "pot;flowerpot",
     "animal;animate;being;beast;brute;creature;fauna",
-    "bicycle;bike;wheel;cycle",
+    "bicycle;bike;wheel;cycle", # target
     "lake",
     "dishwasher;dish;washer;dishwashing;machine",
     "screen;silver;screen;projection;screen",
