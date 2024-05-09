@@ -12,3 +12,5 @@ dist/
 checkpoints/
 semantic_results/
 .idea/
+data/
+*.DS_Store*
