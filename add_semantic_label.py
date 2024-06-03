@@ -150,15 +150,15 @@ if __name__ == '__main__':
     backbone_arch = backbone_archs[BACKBONE_SIZE]
     backbone_name = f"dinov2_{backbone_arch}"
     print(f"loading {backbone_name}...")
-    backbone_model = torch.hub.load("/home/turing/cfs_cz/finn/codes/dinov2/checkpoints", backbone_name, source="local",
+    backbone_model = torch.hub.load("/root/autodl-tmp/ImageGeneration/AI-ModelScope/dinov2", backbone_name, source="local",
                                     pretrained=False, force_reload=True)
     print(f"loaded {backbone_name}")
     backbone_model.eval()
     backbone_model.cuda()
-    cfg = mmcv.Config.fromfile("checkpoints/dinov2_vitg14_ade20k_m2f_config.py")
+    cfg = mmcv.Config.fromfile("/root/autodl-tmp/ImageGeneration/AI-ModelScope/dinov2/dinov2_vitg14_ade20k_m2f_config.py")
     print(f"loading dinov2_vitg14_ade20k_m2f...")
     model = init_segmentor(cfg)
-    load_checkpoint(model, "checkpoints/dinov2_vitg14_ade20k_m2f.pth", map_location="cpu")
+    load_checkpoint(model, "/root/autodl-tmp/ImageGeneration/AI-ModelScope/dinov2/dinov2_vitg14_ade20k_m2f.pth", map_location="cpu")
     print(f"loaded!")
     model.cuda()
     model.eval()
@@ -170,7 +170,7 @@ if __name__ == '__main__':
             data = json.loads(line)
             data_to_process.append(data)
     for i, data in enumerate(tqdm(data_to_process)):
-        image = Image.open(os.path.join(args.input_folder, data['file_name']))
+        image = Image.open(os.path.join(args.input_folder, data['source']))
         array = np.array(image)[:, :, ::-1]  # BGR
         segmentation_logits = inference_segmentor(model, array)[0]  # (h,w)
         addition_semantic_label = ""
